@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 
 export default async function Home() {
   const products = await getAllProducts();
-  console.log(products);
   return (
     <div className="container mx-auto py-10">
       <div className="mb-6 text-center">
@@ -14,7 +13,7 @@ export default async function Home() {
           <Button>Create a new Product</Button>
         </Link>
       </div>
-      <DataTable columns={columns} data={products} />
+      <DataTable columns={columns} data={products!} />
     </div>
   );
 }

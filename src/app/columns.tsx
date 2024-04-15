@@ -15,27 +15,27 @@ export type Product = {
 export const columns: ColumnDef<Product>[] = [
     {
         accessorKey: "id",
-        header: () => <div className="text-left">Sr. No</div>,
+        header: () => <div className="text-left font-semibold">Sr. No</div>,
     },
     {
         accessorKey: "name",
-        header: () => <div className="text-left">Name</div>,
+        header: () => <div className="text-left font-semibold">Name</div>,
     },
     {
         accessorKey: "description",
-        header: () => <div className="text-left">Description</div>,
+        header: () => <div className="text-left font-semibold">Description</div>,
     },
     {
         accessorKey: "price",
-        header: () => <div className="text-left">Price</div>,
+        header: () => <div className="text-left font-semibold">Price</div>,
     },
     {
         accessorKey: "stock",
-        header: () => <div className="text-left">Stock</div>,
+        header: () => <div className="text-left font-semibold">Stock</div>,
     },
     {
         id: "actions",
-        header: () => <div className="text-left">Actions</div>,
+        header: () => <div className="text-left font-semibold">Actions</div>,
         cell: ({ row }) => {
             const product = row.original;
             return (
