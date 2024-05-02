@@ -9,11 +9,11 @@ export default async function Home() {
   return (
     <div className="container mx-auto py-10">
       <div className="mb-6 text-center">
-        <Link href={"/create"}>
+        <Link href={"/products/create"}>
           <Button>Create a new Product</Button>
         </Link>
       </div>
       <DataTable columns={columns} data={products!} />
     </div>
   );
-}
+};

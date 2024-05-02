@@ -14,9 +14,7 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { toast } from "@/components/ui/use-toast"
 import { productSchema } from "@/lib/schemas"
-import { createProduct, updateProductById } from "@/lib/data"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 
@@ -25,7 +23,6 @@ export default function ProductForm({
 }: {
     product: z.infer<typeof productSchema>, btnName: string, submitFunction: any, title: string, type: string
 }) {
-    const router = useRouter();
     const form = useForm<z.infer<typeof productSchema>>({
         resolver: zodResolver(productSchema),
         defaultValues: {

@@ -13,18 +13,18 @@ export const handleDeleteProductAction = async (id: number) => {
             id: id
         }
     });
-    revalidatePath('/');
-    redirect('/');
+    revalidatePath('/products');
+    redirect('/products');
 };
 
 export const handleCreateProductAction = async (product: z.infer<typeof productSchema>) => {
     await createProduct(product);
-    revalidatePath('/');
-    redirect('/');
+    revalidatePath('/products');
+    redirect('/products');
 };
 
 export const handleEditProductAction = async (id: number, product: z.infer<typeof productSchema>) => {
     await updateProductById(id, product);
-    revalidatePath('/');
-    redirect('/');
+    revalidatePath('/products');
+    redirect('/products');
 };

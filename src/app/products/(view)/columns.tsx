@@ -40,10 +40,10 @@ export const columns: ColumnDef<Product>[] = [
             const product = row.original;
             return (
                 <div className="flex gap-2">
-                    <Link href={`/edit/${product.id}`}>
+                    <Link href={`/products/edit/${product.id}`}>
                         <Button>Edit</Button>
                     </Link>
-                    <Link href={`/delete/${product.id}`}>
+                    <Link href={`products/delete/${product.id}`}>
                         <Button>Delete</Button>
                     </Link>
                 </div>

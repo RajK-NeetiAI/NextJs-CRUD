@@ -8,7 +8,8 @@ export default function CreateProductPage() {
         name: '',
         description: '',
         price: 0,
-        stock: 0
+        stock: 0,
+        isDeleted: false
     };
     const submitFunction = handleCreateProductAction.bind(null);
     return (
