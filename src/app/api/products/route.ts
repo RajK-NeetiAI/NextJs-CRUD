@@ -6,14 +6,8 @@ export async function GET(request: Request) {
      * [ ] add user authentication
      */
     try {
-        const { searchParams } = new URL(request.url);
-        const id = searchParams.get('id');
-        if (id) {
-
-        } else {
-            const products = await prisma.product.findMany();
-            return Response.json({ products: products });
-        }
+        const products = await prisma.product.findMany();
+        return Response.json({ products: products });
     } catch (error) {
         console.log(`Error at getAllProducts -> ${error}`);
         return Response.json({ products: null });
